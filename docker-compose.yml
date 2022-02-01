@@ -54,4 +54,3 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /proc/:/host/proc/:ro
       - /sys/fs/cgroup:/host/sys/fs/cgroup:ro
-      - docker exec -it datadog-agent agent flare rohitkhatri.in@gmail.com
