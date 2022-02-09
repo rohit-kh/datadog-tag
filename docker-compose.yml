@@ -16,11 +16,11 @@ services:
       - DD_APM_CONFIG=true
       - DD_SERVICE=datadog-product-tag-poc
       - DD_LOGS_INJECTION=true
-      - DD_ENV=dev
+      - DD_ENV=none
       - DD_APM_ENABLED=true
       - DD_PROFILING_ENABLED=true
       - DD_DOCKER_LABELS_AS_TAGS=product-key1:supply-document
-      - DD_TAG=product:training
+#      - DD_TAGS=product:supply_training,product:supply_branding
       - DD_DOCKER_ENV_AS_TAGS='{"service-key1":"service_value1", "service-key2":"service_value2"}'
     deploy:
       labels:
@@ -41,11 +41,11 @@ services:
       - DD_DOGSTATSD_NON_LOCAL_TRAFFIC=false
       - DD_TRACE_ENABLED=true
       - DD_APM_CONFIG=true
-      - DD_ENV=dev
+      - DD_ENV=none
       - DD_APM_ENABLED=true
       - DD_PROFILING_ENABLED=true
       - DD_DOCKER_LABELS_AS_TAGS=product-key1:supply-document
-      - DD_TAG=product:training
+      - DD_TAGS=product:supply_storefront,product_branding
       - DD_DOCKER_ENV_AS_TAGS=service-key1:service_value1, service-key2:service_value2
     deploy:
       labels:
